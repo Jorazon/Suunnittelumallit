@@ -1,5 +1,7 @@
 #pragma warning(disable : 6031)
 
+#include <iostream>
+
 #include "AterioivaOtus.h"
 #include "Opettaja.h"
 #include "Opiskelija.h"
