@@ -24,10 +24,10 @@ int main() {
   std::cout << "Read encrypted\n" << encrypted->read("encrypted.txt").c_str() << "\n";
   std::cout << "-------------------\n";
   std::cout << "Write megaencrypted\n";
-  megaencrypted->write("encrypted.txt", data);
-  std::cout << "Read plain\n" << plain->read("encrypted.txt").c_str() << "\n";
-  std::cout << "Read encrypted\n" << encrypted->read("encrypted.txt").c_str() << "\n";
-  std::cout << "Read megaencrypted\n" << megaencrypted->read("encrypted.txt").c_str() << "\n";
+  megaencrypted->write("megaencrypted.txt", data);
+  std::cout << "Read plain\n" << plain->read("megaencrypted.txt").c_str() << "\n";
+  std::cout << "Read encrypted\n" << encrypted->read("megaencrypted.txt").c_str() << "\n";
+  std::cout << "Read megaencrypted\n" << megaencrypted->read("megaencrypted.txt").c_str() << "\n";
   std::cout << "-------------------\n";
 
   getchar();
