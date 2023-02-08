@@ -4,6 +4,8 @@
 
 #include "Observer.h"
 
+class Observer;
+
 class Observable {
 public:
   void Attach(Observer *observer) {
