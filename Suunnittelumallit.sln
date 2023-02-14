@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "State", "State\State.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TemplateMethod", "TemplateMethod\TemplateMethod.vcxproj", "{75D18703-56E9-414B-87AB-7EB2BA42F2A7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Strategy", "Strategy\Strategy.vcxproj", "{C265DE33-7C9E-4147-AB04-E2BCA0A39A9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{75D18703-56E9-414B-87AB-7EB2BA42F2A7}.Release|x64.Build.0 = Release|x64
 		{75D18703-56E9-414B-87AB-7EB2BA42F2A7}.Release|x86.ActiveCfg = Release|Win32
 		{75D18703-56E9-414B-87AB-7EB2BA42F2A7}.Release|x86.Build.0 = Release|Win32
+		{C265DE33-7C9E-4147-AB04-E2BCA0A39A9F}.Debug|x64.ActiveCfg = Debug|x64
+		{C265DE33-7C9E-4147-AB04-E2BCA0A39A9F}.Debug|x64.Build.0 = Debug|x64
+		{C265DE33-7C9E-4147-AB04-E2BCA0A39A9F}.Debug|x86.ActiveCfg = Debug|Win32
+		{C265DE33-7C9E-4147-AB04-E2BCA0A39A9F}.Debug|x86.Build.0 = Debug|Win32
+		{C265DE33-7C9E-4147-AB04-E2BCA0A39A9F}.Release|x64.ActiveCfg = Release|x64
+		{C265DE33-7C9E-4147-AB04-E2BCA0A39A9F}.Release|x64.Build.0 = Release|x64
+		{C265DE33-7C9E-4147-AB04-E2BCA0A39A9F}.Release|x86.ActiveCfg = Release|Win32
+		{C265DE33-7C9E-4147-AB04-E2BCA0A39A9F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
