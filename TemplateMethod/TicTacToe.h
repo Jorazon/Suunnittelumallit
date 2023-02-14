@@ -22,39 +22,42 @@ public:
   void printWinner();
 };
 
+/**
+ * @brief Print board
+*/
 void TicTacToe::printBoard() {
   std::string boardString = "";
   for (int x = 0; x < 3 * 2 + 1; x++) {
     for (int y = 0; y < 3 * 2 + 1; y++) {
       if (x % 2 == 0 && y % 2 == 0) {
-        //corners
+        // corner
         if (x == 0 && y == 0)              boardString += (char)201;
         else if (x == 3 * 2 && y == 0)     boardString += (char)200;
         else if (x == 0 && y == 3 * 2)     boardString += (char)187;
         else if (x == 3 * 2 && y == 3 * 2) boardString += (char)188;
-        //edges
+        // edge
         else if (x == 0)                   boardString += (char)203;
         else if (x == 3 * 2)               boardString += (char)202;
         else if (y == 0)                   boardString += (char)204;
         else if (y == 3 * 2)               boardString += (char)185;
-        //interior
+        // interior
         else                               boardString += (char)206;
       }
-      else if (x % 2 == 0) {
-        boardString += (char)205;
-      }
-      else if (y % 2 == 0) {
-        boardString += (char)186;
-      }
-      else {
-        boardString += markers[board[(x / 2)][y / 2]];
-      }
+      // horizontal
+      else if (x % 2 == 0) boardString += (char)205;
+      // vertical
+      else if (y % 2 == 0) boardString += (char)186;
+      // playable spots
+      else boardString += markers[board[(x / 2)][y / 2]];
     }
     boardString.append("\n");
   }
   printf("%s", boardString.c_str());
 }
 
+/**
+ * @brief Print spot selection
+*/
 void TicTacToe::printSelect() {
   std::string selection = "";
   selection += markers[turnPlayer + 1];
@@ -75,6 +78,13 @@ void TicTacToe::printSelect() {
   printf("%s", selection.c_str());
 }
 
+/**
+ * @brief Calculate position from index
+ * @param i index
+ * @param w board width
+ * @param h board height
+ * @return x,y position
+*/
 int* TicTacToe::XYformI(int i, int w, int h) {
   return new int[2] {i % w, i / h};
 }
@@ -93,19 +103,23 @@ void TicTacToe::makePlay(int player) {
   turnPlayer = player;
   printBoard();
   printSelect();
+  // get player's move location
   int* coords;
-  while (true) {
+  while (true) {// try to get input
     printf("Selection: ");
     int selected;
     std::cin >> selected;
+    // test input range is valid
     if (selected >= 1 && selected <= 9) {
       coords = XYformI(selected - 1, 3, 3);
+      // test input location is available
       if (board[coords[1]][coords[0]] == 0) break;
     }
     printf("Invalid selection");
     printf("\033[F\033[K");// move cursor to start of previous line
   }
   printf("\033[0;0H\033[2J");// clear screen
+  // set location
   board[coords[1]][coords[0]] = turnPlayer + 1;
 }
 
