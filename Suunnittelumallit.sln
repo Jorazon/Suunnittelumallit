@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Decorator", "Decorator\Deco
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "State", "State\State.vcxproj", "{3211639E-5433-44AA-897C-374DECAC9208}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TemplateMethod", "TemplateMethod\TemplateMethod.vcxproj", "{75D18703-56E9-414B-87AB-7EB2BA42F2A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{3211639E-5433-44AA-897C-374DECAC9208}.Release|x64.Build.0 = Release|x64
 		{3211639E-5433-44AA-897C-374DECAC9208}.Release|x86.ActiveCfg = Release|Win32
 		{3211639E-5433-44AA-897C-374DECAC9208}.Release|x86.Build.0 = Release|Win32
+		{75D18703-56E9-414B-87AB-7EB2BA42F2A7}.Debug|x64.ActiveCfg = Debug|x64
+		{75D18703-56E9-414B-87AB-7EB2BA42F2A7}.Debug|x64.Build.0 = Debug|x64
+		{75D18703-56E9-414B-87AB-7EB2BA42F2A7}.Debug|x86.ActiveCfg = Debug|Win32
+		{75D18703-56E9-414B-87AB-7EB2BA42F2A7}.Debug|x86.Build.0 = Debug|Win32
+		{75D18703-56E9-414B-87AB-7EB2BA42F2A7}.Release|x64.ActiveCfg = Release|x64
+		{75D18703-56E9-414B-87AB-7EB2BA42F2A7}.Release|x64.Build.0 = Release|x64
+		{75D18703-56E9-414B-87AB-7EB2BA42F2A7}.Release|x86.ActiveCfg = Release|Win32
+		{75D18703-56E9-414B-87AB-7EB2BA42F2A7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
