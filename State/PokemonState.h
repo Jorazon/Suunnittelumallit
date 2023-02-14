@@ -21,7 +21,7 @@ public:
   void SetEvolution(PokemonState* evolution);
   void Attack(PokemonState pokemon);
   void Defend(int damage);
-  bool CheckEvolve(int xp);
+  bool CheckEvolve(int xp, Context *context);
   friend std::ostream& operator<<(std::ostream& os, PokemonState state);
 };
 
@@ -58,7 +58,7 @@ void PokemonState:: Defend(int damage) {
   hp = std::max(0, hp);
 }
 
-bool PokemonState::CheckEvolve(int xp) {
+bool PokemonState::CheckEvolve(int xp, Context *context) {
   if (xp >= xpToEvolve && evolution != nullptr) {
     context->changeState(evolution);
     return true;

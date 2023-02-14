@@ -30,8 +30,8 @@ Pokemon::Pokemon(std::string name) {
 void Pokemon::Attack(Pokemon other) {
   std::cout << *this << " attacks.\n";
   ((PokemonState*)state)->Attack(*(PokemonState*)other.state);
-  if (((PokemonState*)state)->CheckEvolve(++xp)) {
-    std::cout << *this << " evolves to " << *(PokemonState*)state << ".\n";
+  if (((PokemonState*)state)->CheckEvolve(++xp, this)) {
+    std::cout << *this << " evolved to " << *(PokemonState*)state << ".\n";
   }
 }
 

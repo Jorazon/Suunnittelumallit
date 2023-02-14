@@ -23,5 +23,4 @@ Context::Context(State *initialState) {
 
 void Context::changeState(State *state) {
   this->state = state;
-  this->state->SetContext(this);
 }
