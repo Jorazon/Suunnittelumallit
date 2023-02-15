@@ -3,7 +3,6 @@
 #include <iostream>
 
 #include "Timer.h"
-#include "Sorter.h"
 #include "Context.h"
 
 #include "Radix.h"
