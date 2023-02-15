@@ -4,6 +4,7 @@
 
 #include "Timer.h"
 #include "Sorter.h"
+#include "Context.h"
 
 #include "Radix.h"
 #include "Insert.h"
@@ -25,11 +26,7 @@ int main() {
   }
   std::cout << std::endl;
 
-  // create sorters
-  Sorter* sort1 = new Insert();
-  Sorter* sort2 = new Merge();
-  Sorter* sort3 = new Quick();
-  Sorter* sort4 = new Radix();
+  Context context;
 
   // copy arrays
   std::vector<int> array1(source);
@@ -42,23 +39,27 @@ int main() {
 
   std::cout << "Insertion sort:\t";
   // Insertion sort is super slow
-  //sort1->sort(array1);
+  //context.SetStrategy(new Insert());
+  //context.sort(array1);
   //std::cout << timer.elapsed() << " ms" << std::endl;
   std::cout << (int)(1e-5 * N * N + 1e-3 * N) << " ms" << std::endl; // estimate
   timer.reset();
 
   std::cout << "Merge sort:\t";
-  sort2->sort(array2);
+  context.SetStrategy(new Merge());
+  context.sort(array2);
   std::cout << timer.elapsed() << " ms" << std::endl;
   timer.reset();
 
   std::cout << "Quick sort:\t";
-  sort3->sort(array3);
+  context.SetStrategy(new Quick());
+  context.sort(array3);
   std::cout << timer.elapsed() << " ms" << std::endl;
   timer.reset();
 
   std::cout << "Radix sort:\t";
-  sort4->sort(array4);
+  context.SetStrategy(new Radix());
+  context.sort(array4);
   std::cout << timer.elapsed() << " ms" << std::endl;
   timer.reset();
   /*
