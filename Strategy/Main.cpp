@@ -3,7 +3,6 @@
 #include <iostream>
 
 #include "Timer.h"
-#include "Sorter.h"
 #include "Context.h"
 
 #include "Radix.h"
@@ -26,14 +25,14 @@ int main() {
   }
   std::cout << std::endl;
 
-  // create context
-  Context context;
-
   // copy arrays
   std::vector<int> array1(source);
   std::vector<int> array2(source);
   std::vector<int> array3(source);
   std::vector<int> array4(source);
+
+  // create context
+  Context context;
 
   // compare performance
   Timer timer; // start timer
