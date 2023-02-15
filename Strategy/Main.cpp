@@ -18,7 +18,7 @@ int main() {
 
   std::srand(1);
 
-  // generate and print unsorted array array
+  // generate unsorted array
   std::vector<int> source(N);
   for (int i = 0; i < source.size(); ++i) {
     source[i] = std::rand() % 1000;
@@ -26,6 +26,7 @@ int main() {
   }
   std::cout << std::endl;
 
+  // create context
   Context context;
 
   // copy arrays
