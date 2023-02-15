@@ -13,8 +13,19 @@ public:
   void sort(std::vector<int>& array);
 };
 
+int SquareAndMultiply(int x, int y) {
+  int z = x;
+  for (int i = 0; i < sizeof(int) * 8; i++) {
+    z << 1;
+    if (y >> i & 1) z *= x;
+    if (y >> i == 0) break;
+  }
+  return z;
+}
+
 int Radix::getDigit(int number, int n) {
-  return ((number / (int)std::pow(10, n - 1)) % 10);
+  //return ((number / (int)std::pow(10, n - 1)) % 10);
+  return ((number / SquareAndMultiply(10, n - 1)) % 10); // much faster than using std::pow
 }
 
 void Radix::prefixSum(std::vector<int> &array) {

@@ -10,7 +10,7 @@
 #include "Merge.h"
 #include "Quick.h"
 
-const int N = 1000000;
+const int N = 300000;
 
 int main() {
   std::cout << "Sorting array of " << N << std::endl;
@@ -18,15 +18,15 @@ int main() {
   std::vector<int> source(N);
   for (int i = 0; i < source.size(); ++i) {
     source[i] = std::rand() % 1000;
-    //std::cout << source[i] << " ";
+    //std::cout << source[i] << " "; // print array
   }
   std::cout << std::endl;
 
   // create sorters
   Sorter* sort1 = new Insert();
   Sorter* sort2 = new Merge();
-  Sorter* sort3 = new Radix();
-  Sorter* sort4 = new Quick();
+  Sorter* sort3 = new Quick();
+  Sorter* sort4 = new Radix();
 
   // copy arrays
   std::vector<int> array1(source);
@@ -41,7 +41,7 @@ int main() {
   // Insertion sort is super slow
   //sort1->sort(array1);
   //std::cout << timer.elapsed() << " ms" << std::endl;
-  std::cout << (int)(0.0012 * N + 0.00001 * N * N) << " ms" << std::endl; // estimate
+  std::cout << (int)(1e-5 * N * N + 1e-3 * N) << " ms" << std::endl; // estimate
   timer.reset();
 
   std::cout << "Merge sort:\t";
@@ -49,12 +49,12 @@ int main() {
   std::cout << timer.elapsed() << " ms" << std::endl;
   timer.reset();
 
-  std::cout << "Radix sort:\t";
+  std::cout << "Quick sort:\t";
   sort3->sort(array3);
   std::cout << timer.elapsed() << " ms" << std::endl;
   timer.reset();
 
-  std::cout << "Quick sort:\t";
+  std::cout << "Radix sort:\t";
   sort4->sort(array4);
   std::cout << timer.elapsed() << " ms" << std::endl;
   timer.reset();
