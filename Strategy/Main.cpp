@@ -10,12 +10,12 @@
 #include "Merge.h"
 #include "Quick.h"
 
-const int N = 300000;
+const int N = 3000000;
 
 int main() {
   std::cout << "Sorting array of " << N << std::endl;
 
-  std::srand(3);
+  std::srand(1);
 
   // generate and print unsorted array array
   std::vector<int> source(N);

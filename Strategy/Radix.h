@@ -14,10 +14,11 @@ public:
 };
 
 int SquareAndMultiply(int x, int y) {
+  if (y == 0) return 1;
   int z = 1;
   while (y > 0) {
     if (y % 2 == 1) z *= x;
-    x = x << 1;
+    x *= x;
     y = y >> 1;
   }
   return z;
@@ -35,8 +36,6 @@ void Radix::prefixSum(std::vector<int> &array) {
 }
 
 void Radix::sort(std::vector<int> &array) {
-  
-  std::cout << SquareAndMultiply(10, 3) << std::endl;
   
   int digit = 1;
 
