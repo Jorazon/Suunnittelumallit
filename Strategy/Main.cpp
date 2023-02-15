@@ -14,6 +14,9 @@ const int N = 300000;
 
 int main() {
   std::cout << "Sorting array of " << N << std::endl;
+
+  std::srand(3);
+
   // generate and print unsorted array array
   std::vector<int> source(N);
   for (int i = 0; i < source.size(); ++i) {
@@ -74,7 +77,7 @@ int main() {
     std::cout << i << " ";
   }
   std::cout << std::endl;
-
+  
   for (int i : array4) {
     std::cout << i << " ";
   }
