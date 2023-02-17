@@ -32,7 +32,7 @@ void Guesser::Task() {
   for (;;) { 
     int guess = Random::Generate();
     if (randomazzo->ValidateGuess(guess, memento)) {
-      printf("%X guessed right. Answer was %i.\n", (int)this, guess);
+      printf("%p guessed right. Answer was %i.\n", (void*)this, guess);
       break;
     }
   }

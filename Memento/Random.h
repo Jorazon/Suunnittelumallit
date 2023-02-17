@@ -5,6 +5,6 @@
 class Random {
 public:
   static int Generate() {
-    return std::rand() + std::rand() << 15;
+    return std::rand() + (std::rand() << 15);
   }
 };
