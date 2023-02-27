@@ -26,7 +26,7 @@ int main(void) {
     printf("\033[0;0H\033[J");
 
     printf("[1] List album\n");
-    printf("[2] Load image\n");
+    printf("[2] Display image\n");
     printf("[3] Exit\n");
     printf(": ");
 
