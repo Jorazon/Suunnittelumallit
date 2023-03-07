@@ -5,7 +5,7 @@
 class Randomazzo {
 public:
   class Memento;
-  bool ValidateGuess(int guess, Memento* memento);
+  bool ValidateGuess(int guess, void* memento);
   Memento* Join();
 };
 
@@ -16,8 +16,8 @@ private:
   friend Randomazzo;
 };
 
-bool Randomazzo::ValidateGuess(int guess, Memento* memento) {
-  return guess == memento->answer;
+bool Randomazzo::ValidateGuess(int guess, void* memento) {
+  return guess == ((Memento*)memento)->answer;
 }
 
 Randomazzo::Memento* Randomazzo::Join() {
