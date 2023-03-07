@@ -7,7 +7,7 @@ private:
   class Memento;
 public:
   bool ValidateGuess(int guess, void* memento);
-  Memento* Join();
+  void* Join();
 };
 
 class Randomazzo::Memento {
@@ -21,7 +21,7 @@ bool Randomazzo::ValidateGuess(int guess, void* memento) {
   return guess == ((Memento*)memento)->answer;
 }
 
-Randomazzo::Memento* Randomazzo::Join() {
+void* Randomazzo::Join() {
   int answer = Random::Generate();
   return new Memento(answer);
 }
