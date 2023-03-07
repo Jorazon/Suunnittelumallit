@@ -3,8 +3,9 @@
 #include "Random.h"
 
 class Randomazzo {
-public:
+private:
   class Memento;
+public:
   bool ValidateGuess(int guess, void* memento);
   Memento* Join();
 };
