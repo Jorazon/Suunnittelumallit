@@ -4,6 +4,9 @@
 
 #include "Block.h"
 
+/**
+ * @brief Fast data storage
+*/
 class Memory {
 public:
   Memory();

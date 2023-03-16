@@ -1,5 +1,8 @@
 #pragma once
 
+/**
+ * @brief Array with size
+*/
 struct Block {
   const char *data_;
   const size_t size_;

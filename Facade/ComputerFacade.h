@@ -4,6 +4,9 @@
 #include "Memory.h"
 #include "HardDrive.h"
 
+/**
+ * @brief A box of rocks
+*/
 class ComputerFacade {
 public:
   void Start() {

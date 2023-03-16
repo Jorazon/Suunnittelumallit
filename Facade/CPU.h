@@ -4,6 +4,9 @@
 
 #include "Memory.h"
 
+/**
+ * @brief Instruction executor
+*/
 class CPU {
 public:
   CPU() : instruction_pointer_(0) {}
