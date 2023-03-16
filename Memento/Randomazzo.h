@@ -3,10 +3,11 @@
 #include "Random.h"
 
 class Randomazzo {
-public:
+private:
   class Memento;
-  bool ValidateGuess(int guess, Memento* memento);
-  Memento* Join();
+public:
+  bool ValidateGuess(int guess, void* memento);
+  void* Join();
 };
 
 class Randomazzo::Memento {
@@ -16,11 +17,11 @@ private:
   friend Randomazzo;
 };
 
-bool Randomazzo::ValidateGuess(int guess, Memento* memento) {
-  return guess == memento->answer;
+bool Randomazzo::ValidateGuess(int guess, void* memento) {
+  return guess == ((Memento*)memento)->answer;
 }
 
-Randomazzo::Memento* Randomazzo::Join() {
+void* Randomazzo::Join() {
   int answer = Random::Generate();
   return new Memento(answer);
 }

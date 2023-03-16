@@ -20,7 +20,7 @@ private:
   Randomazzo* randomazzo;
   void Task();
   std::thread* thread = nullptr;
-  Randomazzo::Memento *memento = nullptr;
+  void *memento = nullptr;
 };
 
 Guesser::Guesser(Randomazzo& randomazzo) {

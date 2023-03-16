@@ -10,7 +10,16 @@
 #include "Merge.h"
 #include "Quick.h"
 
-const int N = 3000000;
+/*
+Sorting array of 10000000
+
+Insertion sort: 1000010000 ms
+Merge sort:     13350 ms
+Quick sort:     5654 ms
+Radix sort:     3136 ms
+*/
+
+const int N = 10000000;
 
 int main() {
   std::cout << "Sorting array of " << N << std::endl;
