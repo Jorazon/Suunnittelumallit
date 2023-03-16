@@ -53,7 +53,7 @@ char Memory::GetByte(long position) {
     return data_[position];
   }
   else {
-    std::cout << "Memory address out of range\n";
+    std::cout << "Memory address out of range";
     return '\0';
   }
 }

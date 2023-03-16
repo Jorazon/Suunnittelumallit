@@ -19,8 +19,9 @@ public:
     std::cout << "CPU Jump to position " << position << "\n";
   }
   void Execute(Memory* memory) {
+    std::cout << "CPU Execute instruction " << instruction_pointer_ << ":\t";
     char instruction = memory->GetByte(instruction_pointer_);
-    std::cout << "CPU Execute instruction " << instruction_pointer_ << ":\t" << instruction << "\n";
+    std::cout << instruction << "\n";
     instruction_pointer_++;
   }
   long GetInstructionPointer() {
