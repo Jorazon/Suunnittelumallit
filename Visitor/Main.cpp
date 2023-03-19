@@ -1,3 +1,5 @@
+#pragma warning(disable : 6031)
+
 #include <iostream>
 #include <vector>
 
@@ -15,5 +17,5 @@ int main(void) {
     player->accept(calculator);
   }
 
-  return 0;
+  getchar();
 }
