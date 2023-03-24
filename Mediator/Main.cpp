@@ -29,13 +29,14 @@ int main(void) {
 
   mediator.registerJumper(&jumper);
   mediator.registerMeasurer(&measurer);
-  mediator.registerSecretery(&secretary);
 
   mediator.registerJudge(&judge1);
   mediator.registerJudge(&judge2);
   mediator.registerJudge(&judge3);
   mediator.registerJudge(&judge4);
   mediator.registerJudge(&judge5);
+
+  mediator.registerSecretery(&secretary);
 
   mediator.registerScoreboard(&scoreboard);
   mediator.registerResultRow(&resultrow);
