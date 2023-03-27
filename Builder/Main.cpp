@@ -22,13 +22,9 @@ int main(void) {
   BigMac.addCheese();
   BigMac.addSalad();
 
-  std::cout << "Big Mac has:\n";
-  std::cout << BigMac.getBurger().c_str() << '\n';
+  std::cout << "Big Mac has:\n" << BigMac << "\n";
 
-  std::cout << "Layer Burger has:\n";
-  for (auto ingredient : LayerBurger.getBurger()) {
-    std::cout << ingredient->getDescription().c_str() << ", ";
-  }
+  std::cout << "Layer Burger has:\n" << LayerBurger << "\n";
 
   getchar();
 }

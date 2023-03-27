@@ -29,6 +29,13 @@ public:
     return parts;
   }
 
+  friend std::ostream& operator<<(std::ostream& os, HesburgerBuilder& burger) {
+    for (auto ingredient : burger.getBurger()) {
+      os << ingredient->getDescription().c_str() << ", ";
+    }
+    return os;
+  }
+
 private:
   std::vector<Ingredient*> parts;
 

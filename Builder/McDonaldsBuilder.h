@@ -22,6 +22,10 @@ public:
     return burger;
   }
 
+  friend std::ostream& operator<<(std::ostream& os, McDonaldsBuilder& burger) {
+    return os << burger.getBurger().c_str();
+  }
+
 private:
   std::string burger = "";
 };
