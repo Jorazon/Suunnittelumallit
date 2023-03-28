@@ -6,17 +6,17 @@ class Merge : public Sorter {
 private:
   std::vector<int> array;
   std::vector<int> tempMergArr;
-  int length;
-  void mergeParts(int lowerIndex, int middle, int higherIndex);
-  void doMergeSort(int lowerIndex, int higherIndex);
+  size_t length = 0;
+  void mergeParts(size_t lowerIndex, size_t middle, size_t higherIndex);
+  void doMergeSort(size_t lowerIndex, size_t higherIndex);
 public:
   void sort(std::vector<int>& array);
 };
 
-void Merge::doMergeSort(int lowerIndex, int higherIndex) {
+void Merge::doMergeSort(size_t lowerIndex, size_t higherIndex) {
 
   if (lowerIndex < higherIndex) {
-    int middle = lowerIndex + (higherIndex - lowerIndex) / 2;
+    size_t middle = lowerIndex + (higherIndex - lowerIndex) / 2;
     // Below step sorts the left side of the array
     doMergeSort(lowerIndex, middle);
     // Below step sorts the right side of the array
@@ -26,14 +26,14 @@ void Merge::doMergeSort(int lowerIndex, int higherIndex) {
   }
 }
 
-void Merge::mergeParts(int lowerIndex, int middle, int higherIndex) {
+void Merge::mergeParts(size_t lowerIndex, size_t middle, size_t higherIndex) {
 
-  for (int i = lowerIndex; i <= higherIndex; i++) {
+  for (size_t i = lowerIndex; i <= higherIndex; i++) {
     tempMergArr[i] = array[i];
   }
-  int i = lowerIndex;
-  int j = middle + 1;
-  int k = lowerIndex;
+  size_t i = lowerIndex;
+  size_t j = middle + 1;
+  size_t k = lowerIndex;
   while (i <= middle && j <= higherIndex) {
     if (tempMergArr[i] <= tempMergArr[j]) {
       array[k] = tempMergArr[i];

@@ -30,7 +30,7 @@ int Radix::getDigit(int number, int n) {
 }
 
 void Radix::prefixSum(std::vector<int> &array) {
-  for (int i = 1; i < array.size(); i++) {
+  for (size_t i = 1; i < array.size(); i++) {
     array[i] += array[i - 1];
   }
 }

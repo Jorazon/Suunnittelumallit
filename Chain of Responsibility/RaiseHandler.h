@@ -2,7 +2,7 @@
 
 class RaiseHandler {
 protected:
-  RaiseHandler* superior;
+  RaiseHandler* superior = nullptr;
 public:
   virtual bool Handle(double increase) = 0;
   void SetSuperior(RaiseHandler* superior);

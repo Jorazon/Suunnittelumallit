@@ -9,7 +9,7 @@
 int main(void) {
   PhotoAlbum album;
   
-  for (size_t i = 1; i <= 2; i++)
+  for (int i = 1; i <= 2; i++)
   {
     char intBuf[255]{'\0'};
     _itoa_s(i, intBuf, 10);
