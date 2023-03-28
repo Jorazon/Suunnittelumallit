@@ -11,3 +11,10 @@ public:
   Ruoka* CreateRuoka();
 };
 
+Juoma* Opiskelija::CreateJuoma() {
+  return new Kahvi();
+}
+
+Ruoka* Opiskelija::CreateRuoka() {
+  return new Nuudelit();
+}

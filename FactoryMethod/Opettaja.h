@@ -10,3 +10,11 @@ public:
   Juoma* CreateJuoma();
   Ruoka* CreateRuoka();
 };
+
+Juoma* Opettaja::CreateJuoma() {
+  return new Vesi();
+}
+
+Ruoka* Opettaja::CreateRuoka() {
+  return new Salaatti();
+}

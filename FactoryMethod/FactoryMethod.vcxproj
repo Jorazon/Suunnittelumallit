@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AterioivaOtus.cpp" />
-    <ClCompile Include="Koodari.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Opettaja.cpp" />
-    <ClCompile Include="Opiskelija.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AterioivaOtus.h" />
