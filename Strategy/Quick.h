@@ -7,9 +7,9 @@ public:
   void sort(std::vector<int>& array);
 private:
   std::vector<int> array;
-  int length;
-  void quickSort(int lowerIndex, int higherIndex);
-  void exchangeNumbers(int i, int j);
+  size_t length = 0;
+  void quickSort(size_t lowerIndex, size_t higherIndex);
+  void exchangeNumbers(size_t i, size_t j);
 };
 
 void Quick::sort(std::vector<int>& array) {
@@ -22,12 +22,12 @@ void Quick::sort(std::vector<int>& array) {
   array = this->array;
 }
 
-void Quick::quickSort(int lowerIndex, int higherIndex) {
+void Quick::quickSort(size_t lowerIndex, size_t higherIndex) {
 
-  int i = lowerIndex;
-  int j = higherIndex;
+  size_t i = lowerIndex;
+  size_t j = higherIndex;
   // calculate pivot number, I am taking pivot as middle index number
-  int pivot = array[lowerIndex + (higherIndex - lowerIndex) / 2];
+  size_t pivot = array[lowerIndex + (higherIndex - lowerIndex) / 2];
   // Divide into two arrays
   while (i <= j) {
     /**
@@ -56,7 +56,7 @@ void Quick::quickSort(int lowerIndex, int higherIndex) {
     quickSort(i, higherIndex);
 }
 
-void Quick::exchangeNumbers(int i, int j) {
+void Quick::exchangeNumbers(size_t i, size_t j) {
   int temp = array[i];
   array[i] = array[j];
   array[j] = temp;

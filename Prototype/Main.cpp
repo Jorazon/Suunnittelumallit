@@ -4,7 +4,7 @@
 
 #include "Clock.h"
 
-int main(void) {
+int main() {
   // Create a clock and set the time
   Clock *originalClock = new Clock();
   originalClock->setTime(9, 30, 0);

@@ -8,7 +8,7 @@
 #include "WalkingPlayer.h"
 #include "JumpingPlayer.h"
 
-int main(void) {
+int main() {
   BonusCalculator calculator;
 
   std::vector<Player*> players = { new IdlePlayer(), new WalkingPlayer(), new JumpingPlayer() };

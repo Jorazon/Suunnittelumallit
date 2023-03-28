@@ -5,7 +5,7 @@
 
 class Random {
 private:
-  Random() { srand(time(NULL)); };
+  Random() { srand((unsigned int)time(NULL)); };
   Random(const Random&) = delete;
   Random& operator=(const Random&) = delete;
 

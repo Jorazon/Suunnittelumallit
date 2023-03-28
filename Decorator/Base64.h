@@ -87,14 +87,14 @@ namespace Base64 {
     while (pos < length - 1) {
       size_t pos_1 = char_pos(data_c_str[pos + 1]);
 
-      decoded.push_back(((char_pos(data_c_str[pos + 0])) << 2) + ((pos_1 & 0b00110000) >> 4));
+      decoded.push_back((char) ((char_pos(data_c_str[pos + 0])) << 2) + ((pos_1 & 0b00110000) >> 4));
 
       if ((pos + 2 < length) && data_c_str[pos + 2] != '=' && data_c_str[pos + 2] != '.') {
         size_t pos_2 = char_pos(data_c_str[pos + 2]);
         decoded.push_back(((pos_1 & 0b00001111) << 4) + ((pos_2 & 0b00111100) >> 2));
 
         if ((pos + 3 < length) && data_c_str[pos + 3] != '=' && data_c_str[pos + 3] != '.') {
-          decoded.push_back(((pos_2 & 0b00000011) << 6) + char_pos(data_c_str[pos + 3]));
+          decoded.push_back((char) char_pos(data_c_str[pos + 3]) + ((pos_2 & 0b00000011) << 6));
         }
       }
 

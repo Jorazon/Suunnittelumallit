@@ -9,8 +9,8 @@ public:
 
 void Insert::sort(std::vector<int>& array) {
   int temp;
-  for (int i = 1; i < array.size(); i++) {
-    for (int j = i; j > 0; j--) {
+  for (size_t i = 1; i < array.size(); i++) {
+    for (size_t j = i; j > 0; j--) {
       if (array[j] < array[j - 1]) {
         temp = array[j];
         array[j] = array[j - 1];

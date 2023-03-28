@@ -9,7 +9,7 @@
 #include "Scoreboard.h"
 #include "ResultRow.h"
 
-int main(void) {
+int main() {
   Mediator mediator;
 
   Jumper jumper("Kazuyoshi Funaki");

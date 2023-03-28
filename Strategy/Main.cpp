@@ -28,6 +28,7 @@ int main() {
 
   // generate unsorted array
   std::vector<int> source(N);
+
   for (int i = 0; i < source.size(); ++i) {
     source[i] = std::rand() % 1000;
     //std::cout << source[i] << " "; // print array

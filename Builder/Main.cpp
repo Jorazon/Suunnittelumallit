@@ -5,7 +5,7 @@
 #include "HesburgerBuilder.h"
 #include "McDonaldsBuilder.h"
 
-int main(void) {
+int main() {
   HesburgerBuilder LayerBurger;
   McDonaldsBuilder BigMac;
 

@@ -4,7 +4,7 @@
 
 #include "ComputerFacade.h"
 
-int main(void) {
+int main() {
   ComputerFacade computer;
   computer.Start();
 

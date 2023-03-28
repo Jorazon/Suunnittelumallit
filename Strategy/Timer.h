@@ -10,7 +10,9 @@ private:
 public:
   Timer() : start(clock::now()) {}
   void reset() { start = clock::now(); }
-  double elapsed() const {
-    return std::chrono::duration_cast<std::chrono::milliseconds>(clock::now() - start).count();
+  long long elapsed() const {
+    return std::chrono::duration_cast<std::chrono::milliseconds>(
+      clock::now() - start
+      ).count();
   }
 };

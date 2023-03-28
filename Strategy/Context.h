@@ -4,7 +4,7 @@
 
 class Context {
 private:
-  Sorter* strategy;
+  Sorter* strategy = __nullptr;
 public:
   void SetStrategy(Sorter* strategy);
   void sort(std::vector<int>& array);
